@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider, connect } from 'unistore/react';
+import {store} from './store';
 import './styles/index.css';
 
 // import App from './App';
@@ -10,9 +12,11 @@ import { BrowserRouter } from 'react-router-dom';
 const rootEl = document.getElementById('root');
 const render = Component =>
     ReactDOM.render(
-        <BrowserRouter>
-            <Component />
-        </BrowserRouter>,
+        <Provider store = {store}>
+            <BrowserRouter>
+                <Component />
+            </BrowserRouter>
+        </Provider>,
         rootEl
     );
 

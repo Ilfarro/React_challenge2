@@ -15,18 +15,18 @@ class Navigation extends Component {
                         <div className="col-sm-9 col-md-10">
                             <ul className="nav justify-content-end">
                                 <li className="nav-item">
-                                    <Link to='/'>HOME</Link>
+                                    <a className='nav-link'><Link to='/'>HOME</Link></a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/profile'>PROFILE</Link>
+                                <a className='nav-link'><Link to='/profile'>PROFILE</Link></a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/signin'>SIGN IN</Link>
+                                    <a className='nav-link'><Link to='/signin'>SIGN IN</Link></a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to='/' onClick={() => this.props.postSignOut()}>
+                                    <p className='nav-link'><Link to='/' onClick={() => this.props.postSignOut()}>
                                         SIGN OUT
-                                    </Link>
+                                    </Link></p>
                                 </li>
                             </ul>
                         </div>
